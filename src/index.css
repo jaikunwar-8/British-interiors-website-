@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-gold-50: #fbf9f4;
+  --color-gold-100: #f2ebd9;
+  --color-gold-200: #e6d6b3;
+  --color-gold-300: #d8c08a;
+  --color-gold-400: #cfb071;
+  --color-gold-500: #C5A059; /* Artistic Flair Core Gold */
+  --color-gold-600: #ae8841;
+  --color-gold-700: #937030;
+  --color-gold-800: #785a21;
+  --color-gold-900: #5d4314;
+
+  --color-slate-950: #0f1012;
+  --color-slate-900: #1A1C1E; /* Artistic Flair Core Slate */
+  --color-slate-800: #232629;
+  --color-slate-700: #2f3337;
+  --color-slate-600: #3e4349;
+  --color-slate-500: #555c64;
+  --color-slate-400: #767d86;
+  --color-slate-300: #a2a8b2;
+  --color-slate-200: #c9ccd3;
+  --color-slate-100: #eaecf0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-slate-900); /* Artistic Flair Slate background */
+  color: #ffffff;
+}
+
+.card-glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: border-color 250ms cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 250ms cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: border-color, box-shadow, background-color;
+}
+
+.card-glass:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(197, 160, 89, 0.25); /* Subtle golden tint */
+  box-shadow: 0 10px 40px -10px rgba(197, 160, 89, 0.06); /* Soft, diffuse ambient glow */
+}
+
+/* ----------------------------------
+   Premium Minimal Interaction System
+   ---------------------------------- */
+
+/* Precise Custom Snappy Bezier Transition */
+.transition-premium {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Unified Premium Button Physics */
+.btn-premium {
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), 
+              background-color 200ms cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 200ms cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.btn-premium:hover {
+  transform: scale(1.015);
+}
+
+/* Fast haptic feedback on active/click state */
+.btn-premium:active {
+  transform: scale(0.98);
+  transition-duration: 80ms; /* Snappy click down */
+}
+
+/* Minimalist Card/Grid Hover Physics (without drastic translation) */
+.card-premium {
+  transition: transform 250ms cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 250ms cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 250ms cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: border-color, box-shadow, background-color;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-premium:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 10px 40px -10px rgba(197, 160, 89, 0.08); /* Soft diffuse ambient glow */
+}
+
+/* Subtle image zoom inside clipped container */
+.img-zoom-container {
+  overflow: hidden;
+  clip-path: inset(0% round 24px); /* Keeps beautiful card rounded corners intact */
+}
+
+.img-zoom-container img {
+  transition: transform 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+/* Triggers subtle scale zoom of exactly 2% inside clipped containers */
+.group:hover .img-zoom-container img,
+.group:hover img.img-zoom-subtle,
+.card-premium:hover .img-zoom-container img {
+  transform: scale(1.02);
+}
+
+/* Form Input Focus Ring */
+.input-premium {
+  transition: border-color 200ms cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: border-color, box-shadow;
+}
+
+.input-premium:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.35); /* Crisp neutral tone */
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.04); /* Subtle sharp outer ring glow */
+}
+
+

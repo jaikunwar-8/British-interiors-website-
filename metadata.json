@@ -1,0 +1,6 @@
+{
+  "name": "British Interiors",
+  "description": "Elegant, responsive portfolio and showcase landing page for Jalandhar's top-rated premium interior decorator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
